@@ -1,0 +1,23 @@
+/* Reset & Base Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { display: flex; flex-direction: column; font-family: Arial, sans-serif; min-height: 100vh; }
+header { position: fixed; top: 0; left: 0; right: 0; height: 60px; background: #2c3e50; color: #ecf0f1; display: flex; align-items: center; padding: 0 1rem; z-index: 1000; }
+header h1 { font-size: 1.2rem; margin-left: 1rem; }
+.toggle-btn { display: none; background: none; border: none; color: #ecf0f1; font-size: 1.5rem; cursor: pointer; }
+.sidebar { position: fixed; top: 60px; left: 0; bottom: 0; width: 250px; background: #34495e; color: #ecf0f1; overflow-y: auto; padding-top: 1rem; }
+.sidebar ul { list-style: none; }
+.sidebar li + li { margin-top: 0.5rem; }
+.sidebar a { display: block; padding: 0.75rem 1rem; color: inherit; text-decoration: none; }
+.sidebar a.active, .sidebar a:hover { background: #3d566e; }
+main { margin-top: 60px; margin-left: 250px; padding: 1rem; flex: 1; }
+.bottom-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; height: 50px; background: #2c3e50; display: flex; justify-content: space-around; align-items: center; }
+.bottom-bar a { color: #ecf0f1; font-size: 1.5rem; text-decoration: none; }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .toggle-btn { display: block; }
+  .sidebar { left: auto; right: -250px; width: 200px; transition: right 0.3s ease; }
+  .sidebar.open { right: 0; }
+  main { margin-left: 0; margin-bottom: 50px; }
+  .bottom-bar { display: flex; }
+}

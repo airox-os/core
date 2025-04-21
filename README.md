@@ -1,4 +1,5 @@
 # Airox OS 🦅🤖
+![Airox OS Logo](assets/logo.jpg)
 
 > **The AI‑Powered Operating System for Tomorrow**
 
