@@ -5,3 +5,12 @@ edition = "2024"
 
 [dependencies]
 common = { path = "../common" }
+
+[lib]
+name = "kernel"
+path = "src/lib.rs"
+crate-type = ["rlib"]
+
+[[bin]]
+name = "kernel"
+path = "src/main.rs"
