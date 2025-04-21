@@ -1,0 +1,15 @@
+[workspace]
+members = [
+  "bootloader",
+  "kernel",
+  "common",
+  "userland/shell",
+  "userland/utils",
+]
+
+[build]
+# e.g. specify your custom target JSON
+target = "x86_64-blog_os.json"
+
+[target.'cfg(target_arch = "x86_64")']
+rustflags = ["-C", "link-arg=-Tsrc/arch/x86_64/linker.ld"]
