@@ -4,10 +4,10 @@ impl Security {
         crate::log("[Security] Subsystem initialized");
         Security
     }
-    pub fn authenticate(&self, user: &str, _password: &str) {
-        crate::log(&format!("[Security] Authenticating {}", user));
+    pub fn authenticate(&self, _user: &str, _password: &str) {
+        crate::log("[Security] Authenticating user.");
     }
-    pub fn authorize(&self, user: &str, action: &str) {
-        crate::log(&format!("[Security] Authorizing {} for {}", user, action));
+    pub fn authorize(&self, _user: &str, _action: &str) {
+        crate::log("[Security] Authorizing action.");
     }
 }

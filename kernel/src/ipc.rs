@@ -4,10 +4,10 @@ impl IPC {
         crate::log("[IPC] Initialized");
         IPC
     }
-    pub fn send(&self, channel: &str, message: &str) {
-        crate::log(&format!("[IPC] Sent on {}: {}", channel, message));
+    pub fn send(&self, _channel: &str, _message: &str) {
+        crate::log("[IPC] Message sent.");
     }
-    pub fn receive(&self, channel: &str) {
-        crate::log(&format!("[IPC] Receive on {}", channel));
+    pub fn receive(&self, _channel: &str) {
+        crate::log("[IPC] Message received.");
     }
 }

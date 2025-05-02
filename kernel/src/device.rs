@@ -4,7 +4,7 @@ impl DeviceManager {
         crate::log("[DeviceManager] Initialized");
         DeviceManager
     }
-    pub fn register_device(&self, device: &str) {
-        crate::log(&format!("[DeviceManager] Device registered: {}", device));
+    pub fn register_device(&self, _device: &str) {
+        crate::log("[DeviceManager] Device registered.");
     }
 }

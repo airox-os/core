@@ -4,13 +4,13 @@ impl Robotics {
         crate::log("[Robotics] Subsystem initialized");
         Robotics
     }
-    pub fn move_to(&self, target: &str) {
-        crate::log(&format!("[Robotics] Moving to {}", target));
+    pub fn move_to(&self, _target: &str) {
+        crate::log("[Robotics] Moving to target.");
     }
-    pub fn plan_path(&self, start: &str, end: &str) {
-        crate::log(&format!("[Robotics] Planning path from {} to {}", start, end));
+    pub fn plan_path(&self, _start: &str, _end: &str) {
+        crate::log("[Robotics] Planning path.");
     }
-    pub fn fuse_sensors(&self, data: &[u8]) {
-        crate::log(&format!("[Robotics] Sensor fusion on {:?}", data));
+    pub fn fuse_sensors(&self, _data: &[u8]) {
+        crate::log("[Robotics] Sensor fusion performed.");
     }
 }

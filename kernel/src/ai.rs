@@ -4,11 +4,11 @@ impl AI {
         crate::log("[AI] Subsystem initialized");
         AI
     }
-    pub fn register_model(&self, name: &str, _model: &str) {
-        crate::log(&format!("[AI] Model registered: {}", name));
+    pub fn register_model(&self, _name: &str, _model: &str) {
+        crate::log("[AI] Model registered.");
     }
-    pub fn infer(&self, name: &str, data: &str) -> &'static str {
-        crate::log(&format!("[AI] Inference on model {} with data {}", name, data));
+    pub fn infer(&self, _name: &str, _data: &str) -> &'static str {
+        crate::log("[AI] Inference performed.");
         "result"
     }
 }
