@@ -1,11 +1,9 @@
 [workspace]
 resolver = "3"
 members = [
-  "bootloader",
   "kernel",
   "common",
   "userland/shell",
-  "userland/utils",
 ]
 
 [profile.dev]
