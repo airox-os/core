@@ -3,7 +3,7 @@
 
 use core::fmt::Write;
 use common::vga_buffer::WRITER;
-// use core::panic::PanicInfo;
+use core::panic::PanicInfo;
 
 /// Entry point for the kernel. This symbol is looked up by the linker script.
 #[unsafe(no_mangle)]
