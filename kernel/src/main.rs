@@ -3,6 +3,7 @@
 
 use core::fmt::Write;
 use common::vga_buffer::WRITER;
+use core::panic::PanicInfo;
 
 /// Entry point for the kernel. This symbol is looked up by the linker script.
 #[unsafe(no_mangle)]
@@ -14,12 +15,10 @@ pub unsafe extern "C" fn _start() -> ! {
 }
 
 /// Panic handler: prints info and halts
-// #[cfg(not(test))] // Only compile this when not running tests
-// #[panic_handler]
-// fn panic(info: &PanicInfo) -> ! {
-//     write!(WRITER.lock(), "Kernel panic: {}\n", info).unwrap();
-//     loop {}
-// }
+#[panic_handler]
+fn panic(_info: &PanicInfo) -> ! {
+    loop {}
+}
 
 // --- AIROX Modular Kernel Subsystems (Functional Stubs) ---
 
