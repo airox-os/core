@@ -1,4 +1,3 @@
-extern crate volatile;
 
 use core::fmt;
 use lazy_static::lazy_static;
