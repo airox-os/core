@@ -3,11 +3,11 @@
 
 use core::fmt::Write;
 use common::vga_buffer::WRITER;
-use core::panic::PanicInfo;
+// use core::panic::PanicInfo;
 
 /// Entry point for the kernel. This symbol is looked up by the linker script.
 #[unsafe(no_mangle)]
-pub unsafe extern "C" fn _start(boot_info: &'static bootloader::BootInfo) -> ! {
+pub unsafe extern "C" fn _start(_boot_info: &'static bootloader::BootInfo) -> ! {
     // Print a welcome message
     write!(WRITER.lock(), "Hello, Airox OS!\n").unwrap();
     boot_sequence();
