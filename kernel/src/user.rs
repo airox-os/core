@@ -4,10 +4,10 @@ impl UserManager {
         crate::log("[UserManager] Initialized");
         UserManager
     }
-    pub fn add_user(&self, username: &str, _info: &str) {
-        crate::log(&format!("[UserManager] User added: {}", username));
+    pub fn add_user(&self, _username: &str, _info: &str) {
+        crate::log("[UserManager] User added.");
     }
-    pub fn get_user(&self, username: &str) {
-        crate::log(&format!("[UserManager] Get user: {}", username));
+    pub fn get_user(&self, _username: &str) {
+        crate::log("[UserManager] Get user.");
     }
 }

@@ -3,10 +3,10 @@ impl Logger {
     pub fn new() -> Self {
         Logger
     }
-    pub fn log(&self, message: &str) {
-        crate::log(&format!("[LOG] {}", message));
+    pub fn log(&self, _message: &str) {
+        crate::log("[LOG] Message");
     }
-    pub fn error(&self, message: &str) {
-        crate::log(&format!("[ERROR] {}", message));
+    pub fn error(&self, _message: &str) {
+        crate::log("[ERROR] Message");
     }
 }

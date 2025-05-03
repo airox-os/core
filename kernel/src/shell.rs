@@ -4,7 +4,7 @@ impl Shell {
         crate::log("[Shell] Initialized");
         Shell
     }
-    pub fn execute(&self, command: &str) {
-        crate::log(&format!("[Shell] Executing: {}", command));
+    pub fn execute(&self, _command: &str) {
+        crate::log("[Shell] Executing command.");
     }
 }

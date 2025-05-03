@@ -8,4 +8,10 @@ members = [
   "userland/utils",
 ]
 
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
 # Removed [build] and [target] sections, move them to kernel/Cargo.toml

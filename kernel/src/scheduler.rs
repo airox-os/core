@@ -4,7 +4,7 @@ impl Scheduler {
         crate::log("[Scheduler] Initialized");
         Scheduler
     }
-    pub fn schedule(&self, task: &str, time: &str) {
-        crate::log(&format!("[Scheduler] Task scheduled: {} at {}", task, time));
+    pub fn schedule(&self, _task: &str, _time: &str) {
+        crate::log("[Scheduler] Task scheduled.");
     }
 }

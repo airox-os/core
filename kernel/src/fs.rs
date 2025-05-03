@@ -4,10 +4,10 @@ impl FileSystem {
         crate::log("[FileSystem] Initialized");
         FileSystem
     }
-    pub fn create_file(&self, path: &str, content: &str) {
-        crate::log(&format!("[FileSystem] File created: {}", path));
+    pub fn create_file(&self, _path: &str, _content: &str) {
+        crate::log("[FileSystem] File created.");
     }
-    pub fn read_file(&self, path: &str) {
-        crate::log(&format!("[FileSystem] Reading file: {}", path));
+    pub fn read_file(&self, _path: &str) {
+        crate::log("[FileSystem] Reading file.");
     }
 }

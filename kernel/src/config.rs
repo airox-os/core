@@ -4,10 +4,10 @@ impl Config {
         crate::log("[Config] Initialized");
         Config
     }
-    pub fn set(&self, key: &str, value: &str) {
-        crate::log(&format!("[Config] Set {} = {}", key, value));
+    pub fn set(&self, _key: &str, _value: &str) {
+        crate::log("[Config] Set value.");
     }
-    pub fn get(&self, key: &str) {
-        crate::log(&format!("[Config] Get {}", key));
+    pub fn get(&self, _key: &str) {
+        crate::log("[Config] Get value.");
     }
 }
