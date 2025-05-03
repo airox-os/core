@@ -1,5 +1,6 @@
 #![no_std]
 pub mod vga_buffer;
+pub mod volatile;
 
 pub fn add(left: u64, right: u64) -> u64 {
     left + right
