@@ -1,13 +1,12 @@
 #![no_std]
 #![no_main]
 
-use core::panic::PanicInfo;
 use core::fmt::Write;
 use common::vga_buffer::WRITER;
 
 /// Entry point for the kernel. This symbol is looked up by the linker script.
-#[no_mangle]
-pub extern "C" fn _start() -> ! {
+#[unsafe(no_mangle)]
+pub unsafe extern "C" fn _start() -> ! {
     // Print a welcome message
     write!(WRITER.lock(), "Hello, Airox OS!\n").unwrap();
     boot_sequence();
@@ -15,11 +14,12 @@ pub extern "C" fn _start() -> ! {
 }
 
 /// Panic handler: prints info and halts
-#[panic_handler]
-fn panic(info: &PanicInfo) -> ! {
-    write!(WRITER.lock(), "Kernel panic: {}\n", info).unwrap();
-    loop {}
-}
+// #[cfg(not(test))] // Only compile this when not running tests
+// #[panic_handler]
+// fn panic(info: &PanicInfo) -> ! {
+//     write!(WRITER.lock(), "Kernel panic: {}\n", info).unwrap();
+//     loop {}
+// }
 
 // --- AIROX Modular Kernel Subsystems (Functional Stubs) ---
 
@@ -74,18 +74,18 @@ fn boot_sequence() {
     let shell = shell::Shell::new();
     let config = config::Config::new();
     let logger = logger::Logger::new();
-    let arvr = arvr::ARVR::new();
-    let power = power::PowerManager::new();
-    let update = update::Updater::new();
-    let telemetry = telemetry::Telemetry::new();
-    let haptics = haptics::Haptics::new();
-    let voice = voice::VoiceAssistant::new();
-    let bluetooth = bluetooth::Bluetooth::new();
-    let camera = camera::Camera::new();
-    let bios = bios::BIOS::new();
-    let virtualization = virtualization::Virtualization::new();
-    let marketplace = marketplace::Marketplace::new();
-    let policy = policy::PolicyEngine::new();
+    let _arvr = arvr::ARVR::new();
+    let _power = power::PowerManager::new();
+    let _update = update::Updater::new();
+    let _telemetry = telemetry::Telemetry::new();
+    let _haptics = haptics::Haptics::new();
+    let _voice = voice::VoiceAssistant::new();
+    let _bluetooth = bluetooth::Bluetooth::new();
+    let _camera = camera::Camera::new();
+    let _bios = bios::BIOS::new();
+    let _virtualization = virtualization::Virtualization::new();
+    let _marketplace = marketplace::Marketplace::new();
+    let _policy = policy::PolicyEngine::new();
 
     devices.register_device("Camera");
     devices.register_device("Motor");
