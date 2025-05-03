@@ -6,3 +6,4 @@ edition = "2024"
 [dependencies]
 lazy_static = { version = "1.4.0", features = ["spin_no_std"] }
 spin = "0.9.0"
+# No serde, rand, or getrandom dependencies for bare-metal kernel
